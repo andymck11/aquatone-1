@@ -99,7 +99,7 @@ func Gorequest(o core.Options) *gorequest.SuperAgent {
 		Proxy(*o.Proxy).
 		Timeout(time.Duration(*o.HTTPTimeout) * time.Millisecond).
 		SetDebug(*o.Debug).
-		TLSClientConfig(&tls.Config{InsecureSkipVerify: true})
+		TLSClientConfig(&tls.Config{InsecureSkipVerify: false})
 }
 
 func BaseFilenameFromURL(s string) string {
